@@ -1,4 +1,7 @@
+import dayjs from 'dayjs'
+
 const SELECT_MAKE = '#make'
+const SELECT_MODEL = '#model'
 const INPUT_ENGINE_PERFORMANCE = '#engineperformance'
 const INPUT_DATE_MANUFACTURE = 'input[name="Date of Manufacture"]'
 const SELECT_NUMBER_SEATS = '#numberofseats'
@@ -12,6 +15,7 @@ const BTN_NEXT = '#nextenterinsurantdata'
 
 Cypress.Commands.add('inserirDadosFormVehicle', () => {
     cy.get(SELECT_MAKE).select('Renault')
+    cy.get(SELECT_MODEL).select('Moped')
     cy.get(INPUT_ENGINE_PERFORMANCE).type('77')
     cy.get(INPUT_DATE_MANUFACTURE).type(dayjs().format('MM-DD-YYYY')) // pega a data atual e formata no padrão que consta no form no portal
     cy.get(SELECT_NUMBER_SEATS).select('5')
@@ -21,6 +25,11 @@ Cypress.Commands.add('inserirDadosFormVehicle', () => {
     cy.get(INPUT_LIST_PRICE).type('35000')
     cy.get(INPUT_LICENSE_PLATE_NUMBER).type('RTE4J29')
     cy.get(INPUT_ANNUAL_MILEAGE).type('20000')
+    cy.log('Dados do veículo preenchidos com sucesso!')
+})
+
+Cypress.Commands.add('mensagemVeiculoSucesso', () => {
+    cy.screenshot('Campos do cadastro do veículo preenchidos!')
 })
 
 Cypress.Commands.add('clicarBtnNext', () => {
