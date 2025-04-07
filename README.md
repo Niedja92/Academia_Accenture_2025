@@ -5,7 +5,7 @@
 O desafio consiste em realizar **testes automatizados de todas as abas do site** [https://sampleapp.tricentis.com/101/app.php](https://sampleapp.tricentis.com/101/app.php), que é um **site de testes voltado para simulação de cotação de seguro de veículo**.
 
 ## ✅ Pré-requisitos
-- Para executar este projeto, você precisará ter o **Node.js** instalado. Caso não tenha, você pode baixá-lo facilmente
+- Para executar este projeto, você precisará ter o **Node.js** instalado.
 - E também um editor de código, pode ser uma IDE de sua preferência. Recomendo o **Visual Studio Code**.
 
 ## 📁 Estrutura do Projeto (com links)
@@ -43,6 +43,10 @@ ACADEMIA_ACCENTURE_2025
 ├── [package-lock.json](package-lock.json)  
 ├── [package.json](package.json)  
 └── [README.md](README.md)  
+
+## 🖼️ Imagens dos testes
+![Tela Teste Cypress](./cypress/fixtures/img_teste.png)
+![Tela Cypress 2](./cypress/screenshots/Campos%20do%20cadastro%20do%20veículo%20preenchidos!.png)
 
 ## 🖥️  Comandos úteis
 - **Inicia projeto:** npm init -y
