@@ -25,7 +25,7 @@ Cypress.Commands.add('inserirDadosInsurant', () =>{
     cy.get(INPUT_CITY).type('Campinas')
     cy.get(SELECT_OCCUPATION).select('Selfemployed')
     cy.get(INPUT_WEBSITE).type(Cypress.env('email'), {log: false})
-    cy.get(FILE_IMAGE).attachFile('fake_image.jpg')
+    cy.get(FILE_IMAGE).attachFile('fake_image.jpg')                 // fazer upload de um arquivo, neste caso, da imagem
     cy.get(CHECKBOX_HOBBIES).contains('Other').click()
     
     cy.log('Dados do segurado preenchidos com sucesso!')

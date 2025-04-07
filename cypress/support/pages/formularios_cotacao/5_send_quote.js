@@ -42,6 +42,6 @@ Cypress.Commands.add('validarMsgSucesso', () => {
     .should('be.visible')
     .and('contain', 'Sending e-mail success!')
     cy.pause()
-    //cy.get('.confirm').click()
+    cy.get('.confirm').click()
     cy.screenshot('Validação do envio do e-mail com sucesso')
 })

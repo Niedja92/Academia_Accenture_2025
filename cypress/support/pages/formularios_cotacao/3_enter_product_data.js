@@ -11,7 +11,7 @@ Cypress.Commands.add('inserirDadosProduto', () =>{
     cy.get(SELECT_INSURANCE_SUM).select('3.000.000,00')
     cy.get(SELECT_MERIT_RATING).select('Super Bonus')
     cy.get(SELEC_DAMAGE_INSURANCE).select('Full Coverage')
-    cy.get(CHECKBOX_OPTIONAL_PRODUCTS).contains('Euro Protection').click({force: true})
+    cy.get(CHECKBOX_OPTIONAL_PRODUCTS).contains('Euro Protection').click({force: true}) // procura um elemento que contenha o texto buscado, nesse caso 'Euro Protection'
     cy.get(SELECT_COURTESY_CAR).select('Yes')
   
     cy.log('Dados do produto preenchidos com sucesso!')
